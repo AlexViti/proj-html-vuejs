@@ -48,10 +48,16 @@ a {
 	padding: .93em 2.07em;
 	font-size: calc(1em - 1px);
 	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 .btn-primary {
 	color: $darkGray;
 	background-color: $brightSun;
+}
+
+.btn-secondary {
+	color: white;
+	background-color: $darkGray;
 }
 </style>
