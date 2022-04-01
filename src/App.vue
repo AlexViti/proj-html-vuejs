@@ -1,7 +1,10 @@
 <template>
 	<div id="app">
+		<!-- Fixed header -->
 		<header-avada />
+		<!-- Main with sections -->
 		<main-avada />
+		<!-- Footer with some links -->
 		<footer-avada />
 	</div>
 </template>
@@ -21,9 +24,8 @@ export default {
 }
 </script>
 
-Mai,
-FooterAvadanAvada<style
-HeaderAvada lang="scss">
+<style lang="scss">
+@import './assets/styles/style';
 #app {
 	font-family: 'Raleway', Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
