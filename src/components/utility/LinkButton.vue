@@ -45,9 +45,13 @@ export default {
 a {
 	text-transform: uppercase;
 	align-self: center;
+	padding: .93em 2.07em;
+	font-size: calc(1em - 1px);
+	font-weight: 600;
 }
 
 .btn-primary {
+	color: $darkGray;
 	background-color: $brightSun;
 }
 </style>

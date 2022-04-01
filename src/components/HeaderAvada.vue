@@ -37,29 +37,31 @@ export default {
 @import '../assets/styles/partials/variables';
 
 header {
+	height: $headerHeight;
+
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	height: $headerHeight;
+
+	letter-spacing: 1px;
 
 	background-color: white;
 
 	nav {
 		height: 100%;
-		width: clamp(600px, 90%, 1714px);
+		width: clamp(600px, 95%, 1714px);
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 
 		.logo {
-			padding: 2rem;
+			padding: 2rem 0;
 			display: block;
 			height: 100%;
 
 			img {
 				height: 100%;
-				width: 100%;
 				object-fit: contain;
 			}
 		}
@@ -69,9 +71,11 @@ header {
 
 			li {
 				display: flex;
+				font-size: 15px;
+				font-weight: 500;
 
 				& + li {
-					margin-left: 2rem;
+					margin-left: 50px;
 				}
 
 				&.selected {
@@ -83,11 +87,12 @@ header {
 						display: block;
 						position: absolute;
 						top: 100%;
-						transform: translateX(50%);
+						left: 50%;
+						transform: translateX(-50%);
 						width: 0;
 						height: 0;
 						border-style: solid;
-						border-width: 10px 10px 0 10px;
+						border-width: 8px 10px 0;
 						border-color: #ffffff transparent transparent transparent;
 					}
 				}

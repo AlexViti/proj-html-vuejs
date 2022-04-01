@@ -1,10 +1,15 @@
 <template>
 	<!-- Main with a lot of sections -->
-  <main></main>
+<main>
+	<hero-main />
+</main>
 </template>
 
 <script>
+import HeroMain from './sections/HeroMain.vue'
+
 export default {
+	components: { HeroMain },
 	name: 'MainAvada'
 }
 </script>
