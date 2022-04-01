@@ -5,7 +5,7 @@
 	<p>We Build Inspiring Residential &amp; Commercial Spaces</p>
 	<div class="btns">
 		<link-button :color="'secondary'" :text="'Explore Recent Work'" />
-		<link-button :color="'primary'" :text="'Get a quote today'" />
+		<link-button :color="'primary'" :text="'Get a quote today'" :getAQuote="true" />
 	</div>
 </section>
 </template>
@@ -23,7 +23,7 @@ export default {
 #hero {
 	margin-top: $headerHeight;
 	height: calc(100vh - $headerHeight);
-	background: url('../../assets/img/home-hero.jpg');
+	background: url('../../assets/img/home-hero.jpg') no-repeat center center;
 	display: grid;
 	place-content: center;
 	text-align: center;

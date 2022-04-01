@@ -49,15 +49,27 @@ a {
 	font-size: calc(1em - 1px);
 	font-weight: 600;
 	letter-spacing: 1px;
+
+	transition: color 0.2s, background-color 0.2s;
 }
 
 .btn-primary {
 	color: $darkGray;
 	background-color: $brightSun;
+
+	&:hover {
+		color: white;
+		background-color: $darkGray;
+	}
 }
 
 .btn-secondary {
 	color: white;
 	background-color: $darkGray;
+
+	&:hover {
+		color: $darkGray;
+		background-color: $brightSun;
+	}
 }
 </style>

@@ -2,6 +2,7 @@
 	<div id="app">
 		<!-- Fixed header -->
 		<header-avada />
+		<fixed-buttons />
 		<!-- Main with sections -->
 		<main-avada />
 		<!-- Footer with some links -->
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import FixedButtons from './components/FixedButtons.vue'
 import FooterAvada from './components/FooterAvada.vue'
 import HeaderAvada from './components/HeaderAvada.vue'
 import MainAvada from './components/MainAvada.vue'
@@ -19,7 +21,8 @@ export default {
 	components: {
 		HeaderAvada,
 		MainAvada,
-		FooterAvada
+		FooterAvada,
+		FixedButtons
 	}
 }
 </script>

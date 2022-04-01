@@ -73,27 +73,34 @@ header {
 				display: flex;
 				font-size: 15px;
 				font-weight: 500;
+				position: relative;
 
 				& + li {
 					margin-left: 50px;
 				}
 
-				&.selected {
-					position: relative;
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 8px 10px 0;
+					border-color: #ffffff transparent transparent transparent;
+
+					transform: translate(-50%, -100%);
+					transition: transform 0.2s;
+				}
+
+				&.selected,
+				&:not(:last-child):hover {
 					color: $brightSunVib;
 
 					&::after {
-						content: '';
-						display: block;
-						position: absolute;
-						top: 100%;
-						left: 50%;
-						transform: translateX(-50%);
-						width: 0;
-						height: 0;
-						border-style: solid;
-						border-width: 8px 10px 0;
-						border-color: #ffffff transparent transparent transparent;
+						transform: translate(- 50%, 0);
 					}
 				}
 
