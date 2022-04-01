@@ -5,8 +5,13 @@
 		<!-- Logo linked to the homepage -->
 		<a href="/index.html" class="logo"><img :src="logo" alt="Avada Construction"></a>
 		<ul>
-			<li v-for="(link, i) in links" :key="i"><a :href="link.href" v-html="link.text" /></li>
-			<li> <link-button :getAQuote="true" :text="'get quote'" :color="'gold'" /> </li>
+			<li v-for="(link, i) in links" :key="i"
+				@click="selectedIndex = i"
+				:class="{ 'selected': selectedIndex == i }"
+			>
+				<a :href="link.href" v-html="link.text" />
+			</li>
+			<li> <link-button :getAQuote="true" :text="'get quote'" :color="'primary'" /> </li>
 		</ul>
 	</nav>
 </header>
@@ -22,31 +27,76 @@ export default {
 	name: 'HeaderAvada',
 	data: () => ({
 		logo,
-		links: headerLinks
+		links: headerLinks,
+		selectedIndex: 0
 	})
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/partials/variables';
+
 header {
-	padding: 1rem 0 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $headerHeight;
+
+	background-color: white;
 
 	nav {
+		height: 100%;
 		width: clamp(600px, 90%, 1714px);
 		margin: 0 auto;
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+
+		.logo {
+			padding: 2rem;
+			display: block;
+			height: 100%;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: contain;
+			}
+		}
 
 		ul {
 			display: flex;
 
-			li + li {
-				margin-left: 2rem;
-			}
+			li {
+				display: flex;
 
-			a{
-				text-transform: uppercase;
+				& + li {
+					margin-left: 2rem;
+				}
+
+				&.selected {
+					position: relative;
+					color: $brightSunVib;
+
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 100%;
+						transform: translateX(50%);
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 10px 10px 0 10px;
+						border-color: #ffffff transparent transparent transparent;
+					}
+				}
+
+				a {
+					display: flex;
+					align-items: center;
+					text-transform: uppercase;
+				}
 			}
 		}
 	}

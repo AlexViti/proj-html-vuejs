@@ -22,8 +22,8 @@ export default {
 			default: 'get a quote'
 		},
 		color: {
-			required: true,
-			validator: (value) => { ['gold', 'gray', 'transparent'].includes(value) }
+			type: String,
+			validator: (val) => ['primary', 'secondary', 'transparent'].includes(val)
 		},
 		border: {
 			type: Boolean,
@@ -40,11 +40,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/partials/variables';
+
 a {
 	text-transform: uppercase;
+	align-self: center;
 }
 
-.btn-gold {
-	background-color: gold;
+.btn-primary {
+	background-color: $brightSun;
 }
 </style>
