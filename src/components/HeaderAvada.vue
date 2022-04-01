@@ -6,7 +6,7 @@
 		<a href="/index.html" class="logo"><img :src="logo" alt="Avada Construction"></a>
 		<ul>
 			<li v-for="(link, i) in links" :key="i"><a :href="link.href" v-html="link.text" /></li>
-			<li>---BOTTONE---</li>
+			<li> <link-button :getAQuote="true" :text="'get quote'" :color="'gold'" /> </li>
 		</ul>
 	</nav>
 </header>
@@ -15,8 +15,10 @@
 <script>
 import logo from '../assets/img/construction_logo.png'
 import { headerLinks } from '../store/links.js'
+import LinkButton from './utility/LinkButton.vue'
 
 export default {
+	components: { LinkButton },
 	name: 'HeaderAvada',
 	data: () => ({
 		logo,
