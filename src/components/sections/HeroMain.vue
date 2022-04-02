@@ -24,6 +24,8 @@ export default {
 	margin-top: $headerHeight;
 	height: calc(100vh - $headerHeight);
 	background: url('../../assets/img/home-hero.jpg') no-repeat center center;
+	background-size: cover;
+
 	display: grid;
 	place-content: center;
 	text-align: center;

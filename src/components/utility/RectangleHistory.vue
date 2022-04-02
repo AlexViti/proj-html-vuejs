@@ -8,17 +8,12 @@
 
 <script>
 export default {
-
+	name: 'RectangleHistory'
 }
 </script>
 
 <style lang="scss" scoped>
 svg {
-	height: 1em;
-	width: 1em;
-
-	path {
-		fill: currentColor;
-	}
+	fill: currentColor;
 }
 </style>

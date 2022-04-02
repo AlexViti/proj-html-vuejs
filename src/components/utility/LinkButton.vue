@@ -50,26 +50,18 @@ a {
 	font-weight: 600;
 	letter-spacing: 1px;
 
-	transition: color 0.2s, background-color 0.2s;
+	transition: color 0.2s, background-color 0.2s ease;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-secondary:hover {
 	color: $darkGray;
 	background-color: $brightSun;
-
-	&:hover {
-		color: white;
-		background-color: $darkGray;
-	}
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-primary:hover {
 	color: white;
 	background-color: $darkGray;
-
-	&:hover {
-		color: $darkGray;
-		background-color: $brightSun;
-	}
 }
 </style>
