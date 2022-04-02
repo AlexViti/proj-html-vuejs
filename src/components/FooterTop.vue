@@ -10,10 +10,27 @@
 		<!-- Tweet of the screen: <tweet :id="'1332383066631892993'" :options="{ theme: 'dark' }" /> -->
 		<timeline :id="'Theme_Fusion'"
 			:sourceType="'profile'"
-			:options="{ tweetLimit: '1', theme: 'dark' }" />
+			:options="{ tweetLimit: '1', theme: 'dark', chrome: 'nofooter noheader noborders transparent' }"
+		/>
 	</section>
 	<section>
-
+		<h5>Contact us today</h5>
+		<ul>
+			<li>
+				Corporate Location <br>
+				1600 Amphitheatre Parkway <br>
+				London WC1 1BA <br>
+			</li>
+			<li>
+				Residential Location <br>
+				9521 Broadsberry Avenue <br>
+				Paddington RC7 9ZA <br>
+			</li>
+			<li>1.800.458.556 / 1.800.532.2112</li>
+			<li>info@your-domain.com</li>
+			<li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+			<li>Saturday - Sunday: 9:00 AM - 12:00 PM</li>
+		</ul>
 	</section>
 </div>
 </template>
@@ -41,18 +58,32 @@ export default {
 	padding: 80px 6%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
 
 	h5 {
 		font-size: 16px;
 		color: $brightSunVib;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
+		line-height: 2.3em;
 	}
 
 	p {
-		margin-bottom: 20px;
-		line-height: 2em;
+		margin-bottom: 30px;
 	}
+
+	ul {
+		line-height: 2em;
+		padding-left: 1.5rem;
+
+		li {
+			padding-left: 1rem;
+		}
+		li:first-child::marker {
+			content: url(../assets/img/svg/bullets/globe.svg);
+		}
+	}
+
 }
 </style>
