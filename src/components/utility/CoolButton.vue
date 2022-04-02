@@ -3,7 +3,7 @@
 	<div class="icons">
 		<slot></slot>
 	</div>
-	<h5 v-html="text" />
+	<h6 v-html="text" />
 </button>
 </template>
 
@@ -48,7 +48,7 @@ button {
 		transform: translateX(calc(-100% - 32px));
 	}
 
-	h5 {
+	h6 {
 		font-size: 12px;
 	}
 }

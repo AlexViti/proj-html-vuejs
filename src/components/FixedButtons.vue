@@ -65,6 +65,7 @@ export default {
 	font-size: 26px;
 	font-weight: 800;
 	margin-left: -6px;
+	margin-right: -3px;
 
 	span > span {
 		vertical-align: 30%;
