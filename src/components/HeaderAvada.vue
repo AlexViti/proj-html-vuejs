@@ -50,19 +50,16 @@ header {
 
 	nav {
 		height: 100%;
-		width: clamp(600px, 95%, 1714px);
+		width: clamp(600px, 95%, 1700px);
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 
 		.logo {
-			padding: 2rem 0;
-			display: block;
-			height: 100%;
+			align-self: center;
 
 			img {
-				height: 100%;
-				object-fit: contain;
+				width: 190px;
 			}
 		}
 
