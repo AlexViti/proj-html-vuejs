@@ -23,11 +23,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import './assets/styles/style';
-#app {
-	font-family: 'Raleway', Arial, Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+<style lang="sass">
+@import './assets/styles/style'
+#app
+	font-family: 'Raleway', Arial, Helvetica, sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 </style>

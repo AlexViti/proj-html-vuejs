@@ -18,40 +18,35 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../../assets/styles/partials/variables';
-#hero {
-	margin-top: $headerHeight;
-	height: calc(100vh - $headerHeight);
-	background: url('../../assets/img/home-hero.jpg') no-repeat center center;
-	background-size: cover;
+<style lang="sass" scoped>
+@import '../../assets/styles/partials/variables'
+#hero
+	margin-top: $headerHeight
+	height: calc(100vh - $headerHeight)
+	background: url('../../assets/img/home-hero.jpg') no-repeat center center
+	background-size: cover
 
-	display: grid;
-	place-content: center;
-	text-align: center;
+	display: grid
+	place-content: center
+	text-align: center
 
-	h1 {
-		color: white;
-		font-size: 60px;
-		font-weight: 800;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
+	h1
+		color: white
+		font-size: 60px
+		font-weight: 800
+		letter-spacing: 2px
+		text-transform: uppercase
 
-	p {
-		color: $brightSunVib;
-		font-size: 24px;
-		letter-spacing: 1px;
-		margin-top: .6em;
-	}
+	p
+		color: $brightSunVib
+		font-size: 24px
+		letter-spacing: 1px
+		margin-top: .6em
 
-	.btns {
-		font-size: 19px;
-		margin-top: 2.5em;
+	.btns
+		font-size: 19px
+		margin-top: 2.5em
 
-		* + * {
-			margin-left: 1em;
-		}
-	}
-}
+		* + *
+			margin-left: 1em
 </style>

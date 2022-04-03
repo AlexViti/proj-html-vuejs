@@ -31,46 +31,39 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/styles/partials/variables';
+<style lang="sass" scoped>
+@import '../assets/styles/partials/variables'
 
-.fixed-btns {
-	.top-right {
-		position: fixed;
-		top: $headerHeight + 20px;
-		right: 20px;
-		color: $iconGray;
-		display: flex;
-		flex-direction: column;
+.fixed-btns
+	.top-right
+		position: fixed
+		top: $headerHeight + 20px
+		right: 20px
+		color: $iconGray
+		display: flex
+		flex-direction: column
 
-		> * + * {
-			margin-top: .5rem;
-		}
-	}
+		> * + *
+			margin-top: .5rem
 
-	.bottom {
-		position: fixed;
-		bottom: 0;
+	.bottom
+		position: fixed
+		bottom: 0
 		right: 74px
-	}
-}
 
-.on-sale {
-	display: inline-block;
-	text-align: center;
-	height: 32px;
-	width: 40px;
-	overflow: hidden;
-	color: $onSaleColor;
-	font-size: 26px;
-	font-weight: 800;
-	margin-left: -6px;
-	margin-right: -3px;
+.on-sale
+	display: inline-block
+	text-align: center
+	height: 32px
+	width: 40px
+	overflow: hidden
+	color: $onSaleColor
+	font-size: 26px
+	font-weight: 800
+	margin-left: -6px
+	margin-right: -3px
 
-	span > span {
-		vertical-align: 30%;
-		font-size: .55em;
-	}
-}
-
+	span > span
+		vertical-align: 30%
+		font-size: .55em
 </style>

@@ -12,8 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-svg {
-	fill: currentColor;
-}
+<style lang="sass" scoped>
+svg
+	fill: currentColor
 </style>

@@ -33,39 +33,33 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/styles/partials/variables';
-@import '../assets/styles/tooltips';
-footer {
-	color: $footerText;
-	font-weight: 500;
+<style lang="sass" scoped>
+@import '../assets/styles/partials/variables'
+@import '../assets/styles/tooltips'
+footer
+	color: $footerText
+	font-weight: 500
 
-	.footer-bottom {
-		background: $black;
-		padding: 30px 6%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	.footer-bottom
+		background: $black
+		padding: 30px 6%
+		display: flex
+		justify-content: space-between
+		align-items: center
 
-		.copy {
-			font-size: 12px;
-		}
+		.copy
+			font-size: 12px
 
-		.copy a {
-			color: $footerLink;
-		}
+		.copy a
+			color: $footerLink
 
-		.social {
-			a {
-				font-size: 17px;
-				& + a {
-					margin-left: 1.3rem;
-				}
-				.tooltiptext {
-					font-size: 14px;
-				}
-			}
-		}
-	}
-}
+		.social
+			a
+				font-size: 17px
+
+				& + a
+					margin-left: 1.3rem
+
+				.tooltiptext
+					font-size: 14px
 </style>

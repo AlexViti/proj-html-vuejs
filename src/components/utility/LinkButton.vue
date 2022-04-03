@@ -19,7 +19,7 @@ export default {
 		text: {
 			type: String,
 			required: false,
-			default: 'get a quote'
+			default: 'get a free quote'
 		},
 		color: {
 			type: String,
@@ -41,40 +41,35 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../../assets/styles/partials/variables';
+<style lang="sass" scoped>
+@import '../../assets/styles/partials/variables'
 
-a {
-	text-transform: uppercase;
-	align-self: center;
-	padding: .93em 2.07em;
-	display: inline-block;
-	font-size: calc(1em - 1px);
-	font-weight: 600;
-	letter-spacing: 1px;
+a
+	text-transform: uppercase
+	align-self: center
+	padding: .93em 2.07em
+	display: inline-block
+	font-size: calc(1em - 1px)
+	font-weight: 600
+	letter-spacing: 1px
 
-	transition: color 0.2s, background-color 0.2s ease;
-}
+	transition: color 0.2s, background-color 0.2s ease
 
 .btn-primary,
-.btn-secondary:hover {
-	color: $darkGray;
-	background-color: $brightSun;
-}
+.btn-secondary:hover
+	color: $darkGray
+	background-color: $brightSun
 
 .btn-secondary,
-.btn-primary:hover {
-	color: white;
-	background-color: $darkGray;
-}
+.btn-primary:hover
+	color: white
+	background-color: $darkGray
 
-.btn-bordered {
-	border: 2px solid white;
+.btn-bordered
+	border: 2px solid white
 
-	&:hover {
-		color: black;
-		border-color: black;
-		background-color: white;
-	}
-}
+	&:hover
+		color: black
+		border-color: black
+		background-color: white
 </style>

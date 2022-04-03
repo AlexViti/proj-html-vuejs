@@ -55,62 +55,50 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/styles/partials/variables';
+<style lang="sass" scoped>
+@import '../assets/styles/partials/variables'
 
-.footer-top {
-	font-size: 15px;
-	background: $codGray;
-	padding: 80px 6%;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 2rem;
+.footer-top
+	font-size: 15px
+	background: $codGray
+	padding: 80px 6%
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	gap: 2rem
 
-	h5 {
-		font-size: 16px;
-		color: $brightSunVib;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		margin-bottom: 1rem;
-	}
+	h5
+		font-size: 16px
+		color: $brightSunVib
+		text-transform: uppercase
+		letter-spacing: 2px
+		margin-bottom: 1rem
 
-	p {
-		margin-bottom: 30px;
-		line-height: 2.3em;
-	}
+	p
+		margin-bottom: 30px
+		line-height: 2.3em
 
-	ul {
-		line-height: 1.5em;
-		padding-inline-start: 2ch;;
+	ul
+		line-height: 1.5em
+		padding-inline-start: 2ch
 
-		li {
-			padding-left: 1rem;
-			margin-top: 1.5em;
+		li
+			padding-left: 1em
+			margin-top: 1em
 
-			&:first-child::marker {
-				content: url(../assets/img/svg/bullets/globe.svg);
-			}
+			&:first-child::marker
+				content: url(../assets/img/svg/bullets/globe.svg)
+				font-size: 5em
 
-			&:nth-child(2)::marker {
-				content: url(../assets/img/svg/bullets/house.svg);
-			}
+			&:nth-child(2)::marker
+				content: url(../assets/img/svg/bullets/house.svg)
 
 			&:nth-child(3)::marker,
-			&:nth-child(4)::marker {
-				content: url(../assets/img/svg/bullets/phone.svg);
-			}
+			&:nth-child(4)::marker
+				content: url(../assets/img/svg/bullets/phone.svg)
 
-			&:nth-last-child(-n + 2)::marker {
-				content: url(../assets/img/svg/bullets/clock.svg);
-			}
-		}
-	}
+			&:nth-last-child(-n + 2)::marker
+				content: url(../assets/img/svg/bullets/clock.svg)
 
-	img.map {
-		// object-fit: contain;
-		// height: 100%;
-		width: 100%;
-	}
-
-}
+	img.map
+		width: 100%
 </style>

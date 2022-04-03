@@ -13,19 +13,18 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../../assets/styles/partials/variables';
-@import '../../assets/styles/partials/mixins';
+<style lang="sass" scoped>
+@import '../../assets/styles/partials/variables'
+@import '../../assets/styles/partials/mixins'
 
-button {
-	@include button-reset;
-	color: white;
-	background: $darkGray;
-	height: 35px;
-	width: 48px;
-	display: grid;
-	place-items: center;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-}
+button
+	@include button-reset
+	color: white
+	background: $darkGray
+	height: 35px
+	width: 48px
+	display: grid
+	place-items: center
+	border-top-left-radius: 6px
+	border-top-right-radius: 6px
 </style>
