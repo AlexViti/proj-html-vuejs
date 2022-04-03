@@ -32,11 +32,16 @@
 			<li>Saturday - Sunday: 9:00 AM - 12:00 PM</li>
 		</ul>
 	</section>
+	<section>
+		<h5>Our location</h5>
+		<img :src="map" alt="Map" class="map" />
+	</section>
 </div>
 </template>
 
 <script>
 import footerLogo from '../assets/img/footer-logo.png'
+import map from '../assets/img/staticmap.png'
 import LinkButton from './utility/LinkButton.vue'
 import { Timeline } from 'vue-tweet-embed'
 
@@ -44,7 +49,8 @@ export default {
 	components: { LinkButton, Timeline },
 	name: 'FooterTop',
 	data: () => ({
-		footerLogo
+		footerLogo,
+		map
 	})
 }
 </script>
@@ -66,23 +72,44 @@ export default {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		margin-bottom: 1rem;
-		line-height: 2.3em;
 	}
 
 	p {
 		margin-bottom: 30px;
+		line-height: 2.3em;
 	}
 
 	ul {
-		line-height: 2em;
-		padding-left: 1.5rem;
+		line-height: 1.5em;
+		padding-inline-start: 2ch;;
 
 		li {
 			padding-left: 1rem;
+			margin-top: 1.5em;
+
+			&:first-child::marker {
+				content: url(../assets/img/svg/bullets/globe.svg);
+			}
+
+			&:nth-child(2)::marker {
+				content: url(../assets/img/svg/bullets/house.svg);
+			}
+
+			&:nth-child(3)::marker,
+			&:nth-child(4)::marker {
+				content: url(../assets/img/svg/bullets/phone.svg);
+			}
+
+			&:nth-last-child(-n + 2)::marker {
+				content: url(../assets/img/svg/bullets/clock.svg);
+			}
 		}
-		li:first-child::marker {
-			content: url(../assets/img/svg/bullets/globe.svg);
-		}
+	}
+
+	img.map {
+		// object-fit: contain;
+		// height: 100%;
+		width: 100%;
 	}
 
 }

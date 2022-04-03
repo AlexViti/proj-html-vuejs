@@ -47,10 +47,11 @@ header {
 	letter-spacing: 1px;
 
 	background-color: white;
+	box-shadow: 0 -5px 20px 5px #00000026;
 
 	nav {
 		height: 100%;
-		width: clamp(600px, 95%, 1700px);
+		width: clamp(600px, 95%, 1712px);
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
