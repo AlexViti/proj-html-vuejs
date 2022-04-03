@@ -1,5 +1,5 @@
 <template>
-  <a :class="'btn-' + color" :href="href" v-html="text" />
+  <a :class="['btn-' + color, { 'btn-bordered' : border }]" :href="href" v-html="text" />
 </template>
 
 <script>
@@ -23,6 +23,8 @@ export default {
 		},
 		color: {
 			type: String,
+			default: 'transparent',
+			required: false,
 			validator: (val) => ['primary', 'secondary', 'transparent'].includes(val)
 		},
 		border: {
@@ -46,6 +48,7 @@ a {
 	text-transform: uppercase;
 	align-self: center;
 	padding: .93em 2.07em;
+	display: inline-block;
 	font-size: calc(1em - 1px);
 	font-weight: 600;
 	letter-spacing: 1px;
@@ -63,5 +66,15 @@ a {
 .btn-primary:hover {
 	color: white;
 	background-color: $darkGray;
+}
+
+.btn-bordered {
+	border: 2px solid white;
+
+	&:hover {
+		color: black;
+		border-color: black;
+		background-color: white;
+	}
 }
 </style>
