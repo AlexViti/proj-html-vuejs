@@ -2,7 +2,7 @@
 	<!-- Main with a lot of sections -->
 <main>
 	<hero-main />
-	<div class="container-primary">
+	<div class="container-primary" ref="banner">
 		<h2>Do You Have A Construction Project We Can Help With?</h2>
 		<link-button :border="true" :color="'secondary'" />
 	</div>
@@ -33,6 +33,7 @@ export default {
 		windowWidth: 0,
 		sections: [
 			{
+				order: 1,
 				title: 'Specialists In Modern Construction',
 				paragraphs: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.'],
 				cards: [
@@ -75,7 +76,10 @@ export default {
 				]
 			}
 		]
-	})
+	}),
+	mounted() {
+		this.$store.commit('firstSectionSetter', this.$refs.banner)
+	}
 }
 </script>
 

@@ -5,13 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 	state: {
+		firstSection: null
 	},
 	getters: {
 	},
 	mutations: {
-	},
-	actions: {
-	},
-	modules: {
+		firstSectionSetter(state, element) {
+			state.firstSection = element
+		}
 	}
 })

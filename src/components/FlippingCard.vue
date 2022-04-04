@@ -81,6 +81,7 @@ export default {
 		margin: 1.2em 0
 
 .front, .back
+	border-radius: 10px
 	position: absolute
 	-webkit-backface-visibility: hidden
 	backface-visibility: hidden

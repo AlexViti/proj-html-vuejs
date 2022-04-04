@@ -1,5 +1,5 @@
 <template>
-<section>
+<section :id="'s' +  section.order + '-' + section.title.toLowerCase().substring(0, this.section.title.indexOf(' '))">
 	<h2 v-html="section.title" />
 	<p v-for="(paragraph, i) in section.paragraphs" :key="i" v-html="paragraph" />
 	<div :class="'container-' + columns">
