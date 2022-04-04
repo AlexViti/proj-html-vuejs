@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import BannerMain from './BannerMain.vue'
-import FlippingCard from './FlippingCard.vue'
+import BannerMain from './sections/BannerMain.vue'
+import FlippingCard from './sections/cards/FlippingCard.vue'
 import ColumnsSection from './sections/ColumnsSection.vue'
 import HeroMain from './sections/HeroMain.vue'
 import LinkButton from './utility/LinkButton.vue'

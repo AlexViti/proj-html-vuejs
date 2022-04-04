@@ -85,19 +85,23 @@ export default {
 			padding-left: 1em
 			margin-top: 1em
 
+			&::marker
+				font-family: 'Font Awesome 5 Free'
+				font-weight: 900
+
 			&:first-child::marker
-				content: url(../assets/img/svg/bullets/globe.svg)
-				font-size: 5em
+				content: '\f0ac'
 
 			&:nth-child(2)::marker
-				content: url(../assets/img/svg/bullets/house.svg)
+				content: '\f015'
 
 			&:nth-child(3)::marker,
 			&:nth-child(4)::marker
-				content: url(../assets/img/svg/bullets/phone.svg)
+				content: '\f095'
 
 			&:nth-last-child(-n + 2)::marker
-				content: url(../assets/img/svg/bullets/clock.svg)
+				content: '\f017'
+				font-weight: 400
 
 	img.map
 		width: 100%

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import LinkButton from './utility/LinkButton.vue'
+import LinkButton from '../../utility/LinkButton.vue'
 
 export default {
 	components: { LinkButton },
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '../assets/styles/partials/variables/palette'
+@import '../../../assets/styles/partials/variables/palette'
 
 .card
 	line-height: 1.8em
