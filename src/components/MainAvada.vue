@@ -5,19 +5,43 @@
 	<div class="container-primary">
 		<h2>Do You Have A Construction Project We Can Help With?</h2>
 		<link-button :border="true" :color="'secondary'" />
-		<columns-section />
 	</div>
+	<columns-section :section="sections[0]" >
+		<slot>
+			<flipping-card v-for="card in sections[0].cards" :key="card.title" :card="card" />
+		</slot>
+	</columns-section>
 </main>
 </template>
 
 <script>
+import FlippingCard from './FlippingCard.vue'
 import ColumnsSection from './sections/ColumnsSection.vue'
 import HeroMain from './sections/HeroMain.vue'
 import LinkButton from './utility/LinkButton.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection },
-	name: 'MainAvada'
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard },
+	name: 'MainAvada',
+	data: () => ({
+		sections: [
+			{
+				title: 'Specialists In Modern Construction',
+				paragraphs: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.'],
+				cards: [
+					{
+						title: 'Buildings',
+						icon: 'far fa-building',
+						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
+						backCard: {
+							title: 'Artfully Crafted',
+							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
+						}
+					}
+				]
+			}
+		]
+	})
 }
 </script>
 

@@ -38,7 +38,9 @@ export default {
 @import '../assets/styles/tooltips'
 footer
 	color: $footerText
+	font-size: 12px
 	font-weight: 500
+	border-top: 1em solid $footerBorder
 
 	.footer-bottom
 		background: $black
@@ -46,9 +48,6 @@ footer
 		display: flex
 		justify-content: space-between
 		align-items: center
-
-		.copy
-			font-size: 12px
 
 		.copy a
 			color: $footerLink

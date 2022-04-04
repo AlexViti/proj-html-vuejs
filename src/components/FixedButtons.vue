@@ -14,7 +14,7 @@
 		</cool-button>
 	</div>
 	<div class="bottom">
-	<scroll-to-top-btn />
+		<scroll-to-top-btn />
 	</div>
 </div>
 </template>
@@ -35,8 +35,11 @@ export default {
 @import '../assets/styles/partials/variables'
 
 .fixed-btns
-	.top-right
+	.top-right,.bottom
 		position: fixed
+		z-index: 100
+
+	.top-right
 		top: $headerHeight + 20px
 		right: 20px
 		color: $iconGray
@@ -47,7 +50,6 @@ export default {
 			margin-top: .5rem
 
 	.bottom
-		position: fixed
 		bottom: 0
 		right: 74px
 

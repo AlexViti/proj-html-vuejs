@@ -40,6 +40,7 @@ header
 	height: $headerHeight
 
 	position: fixed
+	z-index: 100
 	top: 0
 	left: 0
 	right: 0
