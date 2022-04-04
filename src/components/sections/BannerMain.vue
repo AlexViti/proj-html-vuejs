@@ -1,9 +1,10 @@
 <template>
 <div class="container">
-	<div class="wrapper">
-		<div v-for="(card, i) in cards" :key="i" class="card">
+	<div class="wrapper" v-observe-visibility="!animationStarted ? visibilityChanged : false">
+		<div v-for="(card, i) in cards" :key="i * 10" class="card">
 			<i :class="card.icon" />
-			<number :from="0" :to="card.number" :duration="3" />
+			<number v-if="showNumber" :from="0" :to="card.number" :delay="0.5" :duration="3" />
+			<div v-else>0</div>
 			<h4 v-html="card.text" />
 		</div>
 	</div>
@@ -14,6 +15,8 @@
 export default {
 	name: 'BannerMain',
 	data: () => ({
+		showNumber: false,
+		animationStarted: false,
 		cards: [
 			{
 				icon: 'fas fa-suitcase',
@@ -36,7 +39,13 @@ export default {
 				text: 'International offices'
 			}
 		]
-	})
+	}),
+	methods: {
+		visibilityChanged(isVisible, entry) {
+			this.showNumber = isVisible
+			this.animationStarted = isVisible
+		}
+	}
 }
 </script>
 
