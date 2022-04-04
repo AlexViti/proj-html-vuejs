@@ -26,7 +26,7 @@ export default {
 
 #hero
 	margin-top: $headerHeight
-	height: calc(100vh - $headerHeight)
+	height: $sectionHeight
 	background: url('../../assets/img/home-hero.jpg') no-repeat center center
 	background-size: cover
 

@@ -7,8 +7,12 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+import 'vue-resize/dist/vue-resize.css'
+import VueResize from 'vue-resize'
+
 library.add(faChevronUp, faFacebookF, faTwitter, faYoutube, faInstagram)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.use(VueResize)
 
 Vue.config.productionTip = false
 

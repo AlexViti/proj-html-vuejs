@@ -6,7 +6,8 @@
 		<h2>Do You Have A Construction Project We Can Help With?</h2>
 		<link-button :border="true" :color="'secondary'" />
 	</div>
-	<columns-section :section="sections[0]" >
+	<columns-section :section="sections[0]" :key="windowWidth">
+		<resize-observer @notify="handleResize" />
 		<slot>
 			<flipping-card v-for="card in sections[0].cards" :key="card.title" :card="card" />
 		</slot>
@@ -23,7 +24,13 @@ import LinkButton from './utility/LinkButton.vue'
 export default {
 	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard },
 	name: 'MainAvada',
+	methods: {
+		handleResize({ width }) {
+			this.windowWidth = width
+		}
+	},
 	data: () => ({
+		windowWidth: 0,
 		sections: [
 			{
 				title: 'Specialists In Modern Construction',
@@ -40,28 +47,28 @@ export default {
 					},
 					{
 						title: 'Renovate',
-						icon: 'far fa-building',
+						icon: 'fas fa-sync',
 						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
 						backCard: {
-							title: 'Artfully Crafted',
+							title: 'Freshly new',
 							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
 						}
 					},
 					{
 						title: 'Construct',
-						icon: 'far fa-building',
+						icon: 'fas fa-home',
 						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
 						backCard: {
-							title: 'Artfully Crafted',
+							title: 'Perfect lines',
 							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
 						}
 					},
 					{
 						title: 'Exclusive',
-						icon: 'far fa-building',
+						icon: 'fas fa-truck',
 						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
 						backCard: {
-							title: 'Artfully Crafted',
+							title: 'Planning',
 							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
 						}
 					}
