@@ -25,7 +25,7 @@ export default {
 			type: String,
 			default: 'transparent',
 			required: false,
-			validator: (val) => ['primary', 'secondary', 'transparent'].includes(val)
+			validator: (val) => ['primary', 'secondary', 'transparent', 'white'].includes(val)
 		},
 		border: {
 			type: Boolean,
@@ -55,13 +55,17 @@ a
 
 	transition: color 0.2s, background-color 0.2s ease
 
+.btn-white
+	background-color: white
+
 .btn-primary,
 .btn-secondary:hover
 	color: $darkGray
 	background-color: $brightSun
 
 .btn-secondary,
-.btn-primary:hover
+.btn-primary:hover,
+.btn-white:hover
 	color: white
 	background-color: $darkGray
 

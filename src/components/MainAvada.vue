@@ -37,6 +37,33 @@ export default {
 							title: 'Artfully Crafted',
 							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
 						}
+					},
+					{
+						title: 'Renovate',
+						icon: 'far fa-building',
+						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
+						backCard: {
+							title: 'Artfully Crafted',
+							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
+						}
+					},
+					{
+						title: 'Construct',
+						icon: 'far fa-building',
+						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
+						backCard: {
+							title: 'Artfully Crafted',
+							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
+						}
+					},
+					{
+						title: 'Exclusive',
+						icon: 'far fa-building',
+						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
+						backCard: {
+							title: 'Artfully Crafted',
+							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
+						}
 					}
 				]
 			}
