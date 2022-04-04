@@ -1,14 +1,14 @@
 <template>
 <div class="card" :style="{ height: height +'px' }">
 	<div class="inner">
-		<div class="front" ref="front">
+		<div class="front" ref="front" :class="{ 'parent-height': height }">
 			<div class="icon">
 				<i :class="card.icon"></i>
 			</div>
 			<h3 v-html="card.title" />
 			<p v-html="card.paragraph" />
 		</div>
-		<div class="back" ref="back">
+		<div class="back" ref="back" :class="{ 'parent-height': height }">
 			<h3 v-html="card.backCard.title" />
 			<p v-html="card.backCard.paragraph" />
 			<link-button :text="'get a quote'" :color="'white'" />
@@ -60,6 +60,9 @@ export default {
 	background-color: $primary
 	transform: rotateY(180deg)
 
+	p
+		margin: 1em
+
 .front, .back
 	position: absolute
 	-webkit-backface-visibility: hidden
@@ -74,4 +77,7 @@ export default {
 	border: 1px solid $cardTextColor
 	border-radius: 50%
 	place-items: center
+
+.parent-height
+	height: 100%
 </style>
