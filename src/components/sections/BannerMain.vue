@@ -66,7 +66,7 @@ export default {
 		content: ''
 		position: absolute
 		display: block
-		height: 300px
+		height: 50%
 		width: 115vw
 		background: white
 		border-radius: 50%

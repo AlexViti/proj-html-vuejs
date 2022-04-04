@@ -56,17 +56,16 @@ section
 		line-height: 1.5em
 		font-size: 15px
 
-	.container-4
-		width: clamp(600px, 80%, 1800px)
+	[class^='container-']
 		margin: 3rem auto 0
 		display: grid
-		grid-template-columns: repeat(4, 1fr)
 		gap: 2rem
 
-	.container-3
+	.container-4
 		width: clamp(600px, 80%, 1800px)
-		margin: 3rem auto 0
-		display: grid
+		grid-template-columns: repeat(4, 1fr)
+
+	.container-3
+		width: clamp(600px, 75%, 1200px)
 		grid-template-columns: repeat(3, 1fr)
-		gap: 2rem
 </style>
