@@ -2,7 +2,7 @@
 	<!-- Main with a lot of sections -->
 <main>
 	<hero-main />
-	<div class="container-primary" ref="banner">
+	<div class="container-primary">
 		<h2>Do You Have A Construction Project We Can Help With?</h2>
 		<link-button :border="true" :color="'secondary'" />
 	</div>
@@ -12,17 +12,19 @@
 			<flipping-card v-for="card in sections[0].cards" :key="card.title" :card="card" />
 		</slot>
 	</columns-section>
+	<banner-main />
 </main>
 </template>
 
 <script>
+import BannerMain from './BannerMain.vue'
 import FlippingCard from './FlippingCard.vue'
 import ColumnsSection from './sections/ColumnsSection.vue'
 import HeroMain from './sections/HeroMain.vue'
 import LinkButton from './utility/LinkButton.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard },
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain },
 	name: 'MainAvada',
 	methods: {
 		handleResize({ width }) {
@@ -76,10 +78,7 @@ export default {
 				]
 			}
 		]
-	}),
-	mounted() {
-		this.$store.commit('firstSectionSetter', this.$refs.banner)
-	}
+	})
 }
 </script>
 
