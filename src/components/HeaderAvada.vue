@@ -19,7 +19,7 @@
 
 <script>
 import logo from '../assets/img/construction_logo.png'
-import { headerLinks } from '../store/links.js'
+import { headerLinks } from '../store/dataStore.js'
 import LinkButton from './utility/LinkButton.vue'
 
 export default {

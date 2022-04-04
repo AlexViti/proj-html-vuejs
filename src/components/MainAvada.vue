@@ -13,6 +13,12 @@
 		</slot>
 	</columns-section>
 	<banner-main />
+	<columns-section :section="sections[1]">
+		<resize-observer @notify="handleResize" />
+		<slot>
+			<image-card v-for="card in sections[1].cards" :key="card.title" :card="card" />
+		</slot>
+	</columns-section>
 </main>
 </template>
 
@@ -22,9 +28,11 @@ import FlippingCard from './sections/cards/FlippingCard.vue'
 import ColumnsSection from './sections/ColumnsSection.vue'
 import HeroMain from './sections/HeroMain.vue'
 import LinkButton from './utility/LinkButton.vue'
+import { sections } from '../store/dataStore.js'
+import ImageCard from './sections/cards/ImageCard.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain },
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard },
 	name: 'MainAvada',
 	methods: {
 		handleResize({ width }) {
@@ -33,51 +41,7 @@ export default {
 	},
 	data: () => ({
 		windowWidth: 0,
-		sections: [
-			{
-				order: 1,
-				title: 'Specialists In Modern Construction',
-				paragraphs: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.'],
-				cards: [
-					{
-						title: 'Buildings',
-						icon: 'far fa-building',
-						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
-						backCard: {
-							title: 'Artfully Crafted',
-							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
-						}
-					},
-					{
-						title: 'Renovate',
-						icon: 'fas fa-sync',
-						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
-						backCard: {
-							title: 'Freshly new',
-							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
-						}
-					},
-					{
-						title: 'Construct',
-						icon: 'fas fa-home',
-						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
-						backCard: {
-							title: 'Perfect lines',
-							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
-						}
-					},
-					{
-						title: 'Exclusive',
-						icon: 'fas fa-truck',
-						paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
-						backCard: {
-							title: 'Planning',
-							paragraph: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
-						}
-					}
-				]
-			}
-		]
+		sections
 	})
 }
 </script>

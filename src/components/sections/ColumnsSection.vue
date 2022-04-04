@@ -62,4 +62,11 @@ section
 		display: grid
 		grid-template-columns: repeat(4, 1fr)
 		gap: 2rem
+
+	.container-3
+		width: clamp(600px, 80%, 1800px)
+		margin: 3rem auto 0
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		gap: 2rem
 </style>
