@@ -17,6 +17,14 @@ export default {
 
 <style lang="sass" scoped>
 @import '../../../assets/styles/partials/variables'
+
+@keyframes glow
+	0%
+		transform: scale(1)
+		box-shadow: 0 0 15px 10px #fed23fbb
+	100%
+		transform: scale(1.5)
+		box-shadow: 0 0 15px 10px #fed23f00
 .card
 	color: $cardTextColor
 .icon
@@ -39,7 +47,6 @@ export default {
 		border-radius: 50%
 		height: 100%
 		width: 100%
-		transition: box-shadow .6s linear, transform .3s ease-out
 
 .wrapper:hover .icon
 	transform: scale(.9)
@@ -47,8 +54,7 @@ export default {
 
 	&::before
 		transform: scale(1.5)
-		box-shadow: none
-		box-shadow: 0 0 15px 10px #fed23fbb //TODO: fix animation
+		animation: glow .5s ease-in-out
 
 .wrapper:hover h3
 	color: $brightSun

@@ -4,7 +4,7 @@
 		<h2>Building inspiring spaces</h2>
 		<link-button color="primary"/>
 		<p>Vivamus Sed Consectetur Tellus Dolor Sit Amet, Consectetur Adipiscing Lorem Elit Sadip Ipsum Ets Ficilis Uns.</p>
-		<span>Only takes a few second!</span>
+		<span>Only takes a few seconds!</span>
 	</div>
 </div>
 </template>
@@ -21,8 +21,7 @@ export default {
 @import '../../assets/styles/partials/variables'
 .banner
 	padding: 100px 90px
-	background: url('../../assets/img/about-call-to-action.jpg') center bottom
-	background-attachment: scroll
+	background: url('../../assets/img/about-call-to-action.jpg') no-repeat center 75%
 	background-size: cover
 	color: white
 
@@ -54,7 +53,8 @@ export default {
 		a
 			font-size: 19px
 		span
-			font-size: 12px
+			font-size: 15px
+			font-weight: 500
 
 		p
 			font-size: 20px
