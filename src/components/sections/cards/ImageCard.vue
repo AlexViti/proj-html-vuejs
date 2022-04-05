@@ -12,7 +12,7 @@
 				</span>
 			</div>
 			<h4 v-html="card.title" />
-			<div class="tag" v-html="card.tag" />
+			<div v-if="card.tag" class="tag" v-html="card.tag" />
 		</div>
 	</div>
 	<article v-if="card.article">

@@ -1,6 +1,9 @@
 import project1w400 from '../assets/img/project1-400x400.jpg'
 import project2w400 from '../assets/img/project2-400x400.jpg'
 import project3w400 from '../assets/img/project3-400x400.jpg'
+import article1w400 from '../assets/img/blog-post-1-400x241.jpg'
+import article2w400 from '../assets/img/blog-post-2-400x241.jpg'
+import article3w400 from '../assets/img/blog-post-3-400x241.jpg'
 
 const headerLinks = [
 	{ text: 'home' },
@@ -64,19 +67,28 @@ const sections = [
 		paragraphs: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'],
 		cards: [
 			{
-				img: project1w400,
-				title: 'Florida health facility',
-				tag: 'Commercial'
+				img: article1w400,
+				title: 'Redeveloping Florida’s Remote Southern Coast',
+				article: {
+					paragraph: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed',
+					date: 'December 7th, 2015'
+				}
 			},
 			{
-				img: project2w400,
-				title: 'Maine modernity',
-				tag: 'Residential'
+				img: article2w400,
+				title: 'How We Manage Large Construction Projects',
+				article: {
+					paragraph: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed',
+					date: 'December 7th, 2015'
+				}
 			},
 			{
-				img: project3w400,
-				title: 'Exclusive urban living',
-				tag: 'Commercial'
+				img: article3w400,
+				title: 'Future proofing a modern home',
+				article: {
+					paragraph: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed',
+					date: 'December 6th, 2015'
+				}
 			}
 		],
 		button: 'View all projects'
@@ -111,6 +123,29 @@ const sections = [
 				paragraph: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia'
 			}
 		]
+	},
+	{
+		order: 6,
+		title: 'Latest news',
+		paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+		cards: [
+			{
+				img: project1w400,
+				title: 'Florida health facility',
+				tag: 'Commercial'
+			},
+			{
+				img: project2w400,
+				title: 'Maine modernity',
+				tag: 'Residential'
+			},
+			{
+				img: project3w400,
+				title: 'Exclusive urban living',
+				tag: 'Commercial'
+			}
+		],
+		button: 'View all articles'
 	}
 ]
 

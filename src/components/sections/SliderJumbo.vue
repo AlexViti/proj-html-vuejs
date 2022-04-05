@@ -5,12 +5,12 @@
 		<div v-if="theSwitcher" class="slide">
 			<img class="pic" src="../../assets/img/home-testimonial-1.jpg" alt="Testimonial pic" height="150" width="150">
 			<p>“No man but feels more of a man in the world if he have but a bit of ground that he can call his own. However small it is on the surface, it is four thousand miles deep; and that is a very handsome property.”</p>
-			<h3>HARRY SMITH • NEW HOME OWNER</h3>
+			<strong>HARRY SMITH • NEW HOME OWNER</strong>
 		</div>
 		<div v-else class="slide">
 			<img class="pic" src="../../assets/img/home-testimonial-2.jpg" alt="Testimonial pic" height="150" width="150">
 			<p>“Many novice real estate investors soon quit the profession and invest. When you invest in real estate, you often see a side of humanity that stocks, bonds, mutual funds, and saving money shelter you from.”</p>
-			<h3> JOHN DOE • PROPERTY INVESTOR</h3>
+			<strong> JOHN DOE • PROPERTY INVESTOR</strong>
 		</div>
 	</div>
 </div>
@@ -44,12 +44,17 @@ export default {
 		h2
 			@include headingBorderBottom
 
-		p
+		.slide
 			font-size: 18px
-			font-weight: 500
 			letter-spacing: 2px
-			font-style: italic
-			line-height: calc(5/3 * 1em)
-			width: 43%
-			margin: 0 auto 1em
+
+			p
+				font-weight: 500
+				font-style: italic
+				line-height: calc(5/3 * 1em)
+				width: 43%
+				margin: 0 auto 1em
+
+			strong
+				font-weight: 700
 </style>
