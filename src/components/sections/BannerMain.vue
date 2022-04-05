@@ -50,34 +50,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import '../../assets/styles/partials/mixins'
 @import '../../assets/styles/partials/variables'
 .container
-	position: relative
-	background: url('../../assets/img/home-banner-1.jpg') no-repeat center center
-	background-size: cover
-	height: 600px
-	overflow: hidden
+	@include concaveBg(url('../../assets/img/home-banner-1.jpg'))
 	display: grid
 	place-content: center
 	color: $primary
 	text-align: center
-
-	&::after, &::before
-		content: ''
-		position: absolute
-		display: block
-		height: 50%
-		width: 115vw
-		background: white
-		border-radius: 50%
-
-	&::before
-		top: 0
-		transform: translate(-8.5vw, calc(-2 / 3 * 100%))
-
-	&::after
-		bottom: 0
-		transform: translate(-8.5vw, calc(2 / 3 * 100%))
 
 	.wrapper
 		display: grid

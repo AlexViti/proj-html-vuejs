@@ -5,3 +5,27 @@
 	color: inherit
 	background-color: transparent
 	cursor: pointer
+
+@mixin concaveBg($background, $height: 600px, $surroundBackground: white)
+	position: relative
+	background: $background no-repeat center center
+	background-size: cover
+	height: $height
+	overflow: hidden
+
+	&::after, &::before
+		content: ''
+		position: absolute
+		display: block
+		height: 50%
+		width: 115vw
+		background: $surroundBackground
+		border-radius: 50%
+
+	&::before
+		top: 0
+		transform: translate(-8.5vw, calc(-2 / 3 * 100%))
+
+	&::after
+		bottom: 0
+		transform: translate(-8.5vw, calc(2 / 3 * 100%))

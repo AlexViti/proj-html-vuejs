@@ -25,6 +25,7 @@
 			<light-card v-for="card in sections[2].cards" :key="card.title" :card="card" />
 		</slot>
 	</columns-section>
+	<slider-jumbo />
 </main>
 </template>
 
@@ -37,9 +38,10 @@ import FlippingCard from './sections/cards/FlippingCard.vue'
 import ImageCard from './sections/cards/ImageCard.vue'
 import LightCard from './sections/cards/GlowCard.vue'
 import LinkButton from './utility/LinkButton.vue'
+import SliderJumbo from './sections/SliderJumbo.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard },
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard, SliderJumbo },
 	name: 'MainAvada',
 	methods: {
 		handleResize({ width }) {
