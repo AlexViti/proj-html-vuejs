@@ -1,24 +1,5 @@
 # proj-html-vuejs
 
-## Project setup
-```
-npm install
-```
+Carbon copy of a Wordpress theme page done as an assigment for Boolean, April 2022
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Try Demo Here](https://alexviti.github.io/).
