@@ -35,6 +35,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import '../../assets/styles/partials/mixins'
 @import '../../assets/styles/partials/variables'
 
 section.bg-gray
@@ -53,21 +54,7 @@ section
 	justify-content: center
 
 	h2
-		position: relative
-		font-size: 32px
-		font-weight: 400
-		letter-spacing: 1px
-		text-transform: capitalize
-		padding-bottom: .8em
-
-		&::after
-			content: ''
-			position: absolute
-			left: 50%
-			bottom: 0
-			transform: translateX(-50%)
-			width: 206px
-			border-bottom: 2px solid $primary
+		@include headingBorderBottom
 
 	p
 		color: $cardTextColor

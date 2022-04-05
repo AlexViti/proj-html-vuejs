@@ -10,8 +10,9 @@
 	position: relative
 	background: $background no-repeat center center
 	background-size: cover
-	height: $height
+	min-height: $height
 	overflow: hidden
+	// padding: 20vh 0
 
 	&::after, &::before
 		content: ''
@@ -29,3 +30,20 @@
 	&::after
 		bottom: 0
 		transform: translate(-8.5vw, calc(2 / 3 * 100%))
+
+@mixin headingBorderBottom
+	position: relative
+	font-size: 32px
+	font-weight: 400
+	letter-spacing: 1px
+	text-transform: capitalize
+	padding-bottom: .8em
+
+	&::after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: 0
+		transform: translateX(-50%)
+		width: 206px
+		border-bottom: 2px solid $primary
