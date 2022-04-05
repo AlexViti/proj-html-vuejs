@@ -41,6 +41,7 @@ export default {
 		width: 100%
 
 	.hover
+		cursor: pointer
 		color: #ffffff
 		position: absolute
 		top: 0
@@ -63,7 +64,6 @@ export default {
 				width: 50px
 				border-radius: 50%
 				background-color: #ffffff
-				cursor: pointer
 
 				& + .icon
 					margin-left: 1em
@@ -89,10 +89,15 @@ article
 	color: $cardTextColor
 
 	h3
+		cursor: pointer
 		color: $darkGray
 		font-size: 24px
 		letter-spacing: 1px
 		font-weight: 500
+		transition: color .2s
+
+		&:hover
+			color: $primary
 
 	.date
 		font-size: 12px

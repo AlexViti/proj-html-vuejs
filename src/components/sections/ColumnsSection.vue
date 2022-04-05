@@ -65,7 +65,7 @@ section
 		font-size: 15px
 
 	[class^='container-']
-		margin: 3rem auto 0
+		margin: 2rem auto 0
 		display: grid
 		gap: 2rem
 
