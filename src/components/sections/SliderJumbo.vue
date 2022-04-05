@@ -12,6 +12,7 @@
 			<p>“Many novice real estate investors soon quit the profession and invest. When you invest in real estate, you often see a side of humanity that stocks, bonds, mutual funds, and saving money shelter you from.”</p>
 			<strong> JOHN DOE • PROPERTY INVESTOR</strong>
 		</div>
+		<span class="dot" :class="{ 'active' : theSwitcher }" @click="theSwitcher = true" /><span class="dot" :class="{ 'active' : !theSwitcher }" @click="theSwitcher = false" />
 	</div>
 </div>
 </template>
@@ -57,4 +58,18 @@ export default {
 
 			strong
 				font-weight: 700
+
+.dot
+	cursor: pointer
+	margin-top: 1rem
+	display: inline-block
+	height: 20px
+	width: 20px
+	border-radius: 50%
+	border: 1px solid white
+
+	& + &
+		margin-left: 1rem
+	&.active
+		background-color: white
 </style>
