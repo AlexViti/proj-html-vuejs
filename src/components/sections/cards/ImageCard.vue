@@ -17,7 +17,7 @@
 	</div>
 	<article v-if="card.article">
 		<h3 v-html="card.title" />
-		<small v-html="card.article.date" />
+		<div class="date" v-html="card.article.date" />
 		<p v-html="card.article.paragraph" />
 	</article>
 </div>
@@ -80,4 +80,28 @@ export default {
 	&:hover .hover
 		opacity: 1
 		transform: scaleY(1)
+
+article
+	padding: 1.5rem
+	margin-top: -3px
+	text-align: left
+	background: white
+	color: $cardTextColor
+
+	h3
+		color: $darkGray
+		font-size: 24px
+		letter-spacing: 1px
+		font-weight: 500
+
+	.date
+		font-size: 12px
+		margin: 1em 0 2em
+
+	p
+		font-size: 15px
+		font-weight: 500
+		border-top: 2px solid #eae8e8
+		padding: 1em 0
+		line-height: 2em
 </style>

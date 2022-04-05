@@ -3,7 +3,7 @@
 	<div class="wrapper">
 		<h2>Trusted partners</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-		<agile slidesToShow="5" autoplay :dots="false" :navButtons="false">
+		<agile :slidesToShow="5" autoplay :dots="false" :navButtons="false">
 			<img v-for="(logo, i) in logos" :key="i" :src="logo">
 		</agile>
 	</div>
