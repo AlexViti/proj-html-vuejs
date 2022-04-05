@@ -6,33 +6,40 @@
 		<h2>Do You Have A Construction Project We Can Help With?</h2>
 		<link-button :border="true" :color="'secondary'" />
 	</div>
-	<columns-section :section="sections[0]" :key="windowWidth">
+	<columns-section :section="sections[0]" :key="windowWidth" h100 >
 		<resize-observer @notify="handleResize" />
 		<slot>
 			<flipping-card v-for="card in sections[0].cards" :key="card.title" :card="card" />
 		</slot>
 	</columns-section>
 	<banner-main />
-	<columns-section :section="sections[1]">
+	<columns-section :section="sections[1]" h100>
 		<resize-observer @notify="handleResize" />
 		<slot>
 			<image-card v-for="card in sections[1].cards" :key="card.title" :card="card" />
+		</slot>
+	</columns-section>
+	<columns-section :section="sections[2]" narrow-container>
+		<resize-observer @notify="handleResize" />
+		<slot>
+			<light-card v-for="card in sections[2].cards" :key="card.title" :card="card" />
 		</slot>
 	</columns-section>
 </main>
 </template>
 
 <script>
-import BannerMain from './sections/BannerMain.vue'
-import FlippingCard from './sections/cards/FlippingCard.vue'
-import ColumnsSection from './sections/ColumnsSection.vue'
 import HeroMain from './sections/HeroMain.vue'
-import LinkButton from './utility/LinkButton.vue'
+import BannerMain from './sections/BannerMain.vue'
+import ColumnsSection from './sections/ColumnsSection.vue'
 import { sections } from '../store/dataStore.js'
+import FlippingCard from './sections/cards/FlippingCard.vue'
 import ImageCard from './sections/cards/ImageCard.vue'
+import LightCard from './sections/cards/GlowCard.vue'
+import LinkButton from './utility/LinkButton.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard },
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard },
 	name: 'MainAvada',
 	methods: {
 		handleResize({ width }) {

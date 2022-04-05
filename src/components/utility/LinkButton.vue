@@ -59,7 +59,8 @@ a
 	background-color: white
 
 .btn-primary,
-.btn-secondary:hover
+.btn-secondary:hover,
+.btn-transparent:hover
 	color: $darkGray
 	background-color: $brightSun
 
