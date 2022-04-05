@@ -29,7 +29,7 @@
 	<columns-section :section="sections[3]">
 		<resize-observer @notify="handleResize" />
 		<slot>
-			<image-card v-for="card in sections[1].cards" :key="card.title" :card="card" />
+			<image-card v-for="card in sections[3].cards" :key="card.title" :card="card" />
 		</slot>
 	</columns-section>
 	<carousel-partners />
