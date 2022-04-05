@@ -33,7 +33,7 @@
 		</slot>
 	</columns-section>
 	<carousel-partners />
-	<botton-banner />
+	<bottom-banner />
 </main>
 </template>
 
@@ -48,10 +48,10 @@ import LightCard from './sections/cards/GlowCard.vue'
 import LinkButton from './utility/LinkButton.vue'
 import SliderJumbo from './sections/SliderJumbo.vue'
 import CarouselPartners from './sections/CarouselPartners.vue'
-import BottonBanner from './sections/BottonBanner.vue'
+import BottomBanner from './sections/BottomBanner.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard, SliderJumbo, CarouselPartners, BottonBanner },
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard, SliderJumbo, CarouselPartners, BottomBanner },
 	name: 'MainAvada',
 	methods: {
 		handleResize({ width }) {

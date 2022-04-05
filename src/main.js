@@ -16,12 +16,15 @@ import VueObserveVisibility from 'vue-observe-visibility'
 
 import VueAgile from 'vue-agile'
 
+import Vuetify from 'vuetify/lib'
+
 library.add(faChevronUp, faFacebookF, faTwitter, faYoutube, faInstagram, faMagnifyingGlass, faLink)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueResize)
 Vue.use(VueNumber)
 Vue.use(VueObserveVisibility)
 Vue.use(VueAgile)
+Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 
