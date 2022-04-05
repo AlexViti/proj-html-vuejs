@@ -13,14 +13,15 @@ import VueResize from 'vue-resize'
 import VueNumber from 'vue-number-animation'
 
 import VueObserveVisibility from 'vue-observe-visibility'
-import VueAnimateNumber from 'vue-animate-number'
+
+import VueAgile from 'vue-agile'
 
 library.add(faChevronUp, faFacebookF, faTwitter, faYoutube, faInstagram, faMagnifyingGlass, faLink)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueResize)
 Vue.use(VueNumber)
 Vue.use(VueObserveVisibility)
-Vue.use(VueAnimateNumber)
+Vue.use(VueAgile)
 
 Vue.config.productionTip = false
 

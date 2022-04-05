@@ -58,10 +58,10 @@ section
 
 	p
 		color: $cardTextColor
-		width: 50%
+		width: 45%
 		margin: 0 auto
 		padding: 2rem
-		line-height: 1.5em
+		line-height: 2.3em
 		font-size: 15px
 
 	[class^='container-']

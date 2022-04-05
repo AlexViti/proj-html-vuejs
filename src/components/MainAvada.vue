@@ -32,6 +32,7 @@
 			<image-card v-for="card in sections[1].cards" :key="card.title" :card="card" />
 		</slot>
 	</columns-section>
+	<carousel-partners />
 </main>
 </template>
 
@@ -45,9 +46,10 @@ import ImageCard from './sections/cards/ImageCard.vue'
 import LightCard from './sections/cards/GlowCard.vue'
 import LinkButton from './utility/LinkButton.vue'
 import SliderJumbo from './sections/SliderJumbo.vue'
+import CarouselPartners from './sections/CarouselPartners.vue'
 
 export default {
-	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard, SliderJumbo },
+	components: { HeroMain, LinkButton, ColumnsSection, FlippingCard, BannerMain, ImageCard, LightCard, SliderJumbo, CarouselPartners },
 	name: 'MainAvada',
 	methods: {
 		handleResize({ width }) {

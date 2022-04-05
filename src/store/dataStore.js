@@ -5,6 +5,17 @@ import article1w400 from '../assets/img/blog-post-1-400x241.jpg'
 import article2w400 from '../assets/img/blog-post-2-400x241.jpg'
 import article3w400 from '../assets/img/blog-post-3-400x241.jpg'
 
+// 320x202
+import logo1 from '../assets/img/home-logo1.png'
+import logo2 from '../assets/img/home-logo2.png'
+import logo3 from '../assets/img/home-logo3.png'
+import logo4 from '../assets/img/home-logo4.png'
+import logo5 from '../assets/img/home-logo5.png'
+
+const logos = [logo1, logo2, logo3, logo4, logo5]
+
+export { logos }
+
 const headerLinks = [
 	{ text: 'home' },
 	{ text: 'about' },
